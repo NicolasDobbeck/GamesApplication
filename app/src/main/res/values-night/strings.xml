@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_main_welcome">Welcome</string>
+    <string name="text_subtitle">With our app it will be much easier and more fun to keep track of your games!</string>
+    <string name="hint_password">Password</string>
+    <string name="text_ckecked_box">Remember me</string>
+    <string name="text_create_account">Create an account</string>
+    <string name="text_new_account">New account</string>
+    <string name="text_photo_singup">shall we choose a photo?</string>
+    <string name="text_autentication_singup">Data for authentication</string>
+    <string name="text_personal_data">Personal data</string>
+    <string name="hint_name_singup">What is your name?</string>
+    <string name="text_city_singup">What is your city?</string>
+    <string name="text_birth_singup">Birth date?</string>
+    <string name="level_gaming">What is your gaming level?</string>
+    <string name="text_favorite_console">What is your favorite console?</string>
+    <string name="text_sex_person">Sex:</string>
+    <string name="text_feminine">Feminine</string>
+    <string name="text_masculine">Masculine</string>
+    <string name="games_finished">Games Finished</string>
+</resources>

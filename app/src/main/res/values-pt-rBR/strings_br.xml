@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Games Application</string>
+    <string name="login_main">Login</string>
+    <string name="text_main_welcome">Bem-Vindo</string>
+    <string name="text_subtitle">Com nosso aplicativo será muito mais fácil e divertido acompanhar seus jogos!</string>
+    <string name="edit_text_email">E-mail</string>
+    <string name="hint_password">Senha</string>
+    <string name="text_ckecked_box">Lembre-me</string>
+    <string name="text_log_in">Entrar</string>
+    <string name="text_create_account">Criar conta aqui</string>
+    <string name="text_new_account">Nova Conta</string>
+    <string name="text_photo_singup">Vamos escolher uma foto?</string>
+    <string name="text_autentication_singup">Dados para autenticação</string>
+    <string name="text_personal_data">Dados pessoais</string>
+    <string name="hint_name_singup">Qual o seu nome?</string>
+    <string name="text_city_singup">Qual é a sua cidade?</string>
+    <string name="text_birth_singup">Data de nascimento?</string>
+    <string name="level_gaming">Qual é o seu nível de jogo?</string>
+    <string name="text_favorite_console">Qual é o seu console favorito?</string>
+    <string name="text_sex_person">Sexo:</string>
+    <string name="text_feminine">Feminino</string>
+    <string name="text_masculine">Masculino</string>
+</resources>
