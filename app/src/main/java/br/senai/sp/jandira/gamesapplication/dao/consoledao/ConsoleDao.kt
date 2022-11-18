@@ -17,7 +17,7 @@ interface ConsoleDao {
     @Update
     fun update(console: Console): Int
 
-    @Query("SELECT * FROM tbl_console ORDER BY nome ASC")
+    @Query("SELECT * FROM tbl_console ORDER BY nome_console ASC")
     fun getAll(): List<Console>
 
     @Query("SELECT * FROM tbl_console WHERE id = :id")

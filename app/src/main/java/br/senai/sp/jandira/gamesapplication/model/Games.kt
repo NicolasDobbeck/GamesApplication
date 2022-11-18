@@ -5,18 +5,18 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-//Quando puxamos esse atributo estamos dizendo que essa classe será uma tabela
-@Entity(tableName = "tbl_console")
-class Console {
-
+@Entity(tableName = "tbl_games")
+class Games {
     @PrimaryKey(autoGenerate = true)
     var id = 0
 
-    var nome_console = ""
-    var fabricante = ""
+    var foto= ""
+    var titulo = ""
     var descricao = ""
-    var foto = ""
+    var estudio = ""
 
     @ColumnInfo(name = "ano_lancamento")
     var anoLancamento = 0
+
+    var finalizado = 0
 }

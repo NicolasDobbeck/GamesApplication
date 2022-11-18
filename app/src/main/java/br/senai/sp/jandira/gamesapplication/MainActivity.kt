@@ -28,12 +28,32 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.buttonLogin.setOnClickListener {
+            login()
+        }
+    }
+
+    private fun login() {
+        if(validar()){
+            val email = binding.editTextTextEmailAddress.text.toString()
+            val senha = binding.editTextTextPassword.text.toString()
+
+            //Abrir o BANCO DE DADOS
 
         }
     }
 
+    private fun validar(): Boolean {
+        if(binding.editTextTextEmailAddress.text.isEmpty()){
+            binding.editTextTextEmailAddress.error = "E-mail is required!"
+            return false
+        }
 
-
+        if (binding.editTextTextPassword.text.isEmpty()){
+            binding.editTextTextPassword.error = "Password is required!"
+            return false
+        }
+        return true
+    }
 
 
 }

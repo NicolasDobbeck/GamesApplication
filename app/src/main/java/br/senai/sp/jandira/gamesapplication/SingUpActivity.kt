@@ -2,14 +2,22 @@ package br.senai.sp.jandira.gamesapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import br.senai.sp.jandira.gamesapplication.databinding.ActivityMainBinding
+import br.senai.sp.jandira.gamesapplication.databinding.ActivitySingUpBinding
 
 class SingUpActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivitySingUpBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sing_up)
+
+        binding = ActivitySingUpBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -27,6 +35,9 @@ class SingUpActivity : AppCompatActivity() {
 
         return false
     }
+
+
+
 
     //Chama o menu criado
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

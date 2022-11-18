@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import br.senai.sp.jandira.gamesapplication.model.Console
 
 
-//Quando setamos essa classe como database precisamos declarar todas as
+//Quando setamos essa classe como database precisamos declarar todas as entidades do seu banco
 @Database(entities = [Console::class], version = 1)
 abstract class ConsoleDb: RoomDatabase() {
 
@@ -20,7 +20,7 @@ abstract class ConsoleDb: RoomDatabase() {
 
         fun getDataBase(context: Context): ConsoleDb {
             if(!Companion::instance.isInitialized){
-                instance = Room.databaseBuilder(context, ConsoleDb::class.java, "db_games_application").allowMainThreadQueries().build()
+                instance = Room.databaseBuilder(context, ConsoleDb::class.java, "db_console").allowMainThreadQueries().build()
             }
             return instance
         }
