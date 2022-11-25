@@ -21,5 +21,8 @@ interface UsuarioDao {
     fun getAll(): List<Usuario>
 
     @Query("SELECT * FROM tbl_usuario WHERE id = :id")
-    fun getUsuarioById(id: Int): List<Usuario>
+    fun getUsuarioById(id: Int): Usuario
+
+    @Query("SELECT * FROM tbl_usuario WHERE email = :email")
+    fun getUsuarioByEmail(email: String): Usuario
 }

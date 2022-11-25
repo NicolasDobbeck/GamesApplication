@@ -8,10 +8,12 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import br.senai.sp.jandira.gamesapplication.databinding.ActivityMainBinding
+import br.senai.sp.jandira.gamesapplication.repository.UsuarioRepository
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var userRepository: UsuarioRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,19 +34,31 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun login() {
+    private fun login(): Boolean {
         if(validar()){
-            val email = binding.editTextTextEmailAddress.text.toString()
-            val senha = binding.editTextTextPassword.text.toString()
+            val email = binding.editTextEmailAddress.text.toString()
+            userRepository = UsuarioRepository(this)
+            val userEmail = userRepository.getUsuarioByEmail(email)
 
-            //Abrir o BANCO DE DADOS
+            if (userEmail === null){
+                Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()
+                return false
+            }
+            else if (userEmail.senha != binding.editTextTextPassword.text.toString()){
+                Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()
+                return false
+            }else{
+                val openAccountActivity = Intent(this, AccountActivity::class.java)
+                startActivity(openAccountActivity)
+            }
 
         }
+        return true
     }
 
     private fun validar(): Boolean {
-        if(binding.editTextTextEmailAddress.text.isEmpty()){
-            binding.editTextTextEmailAddress.error = "E-mail is required!"
+        if(binding.editTextEmailAddress.text.isEmpty()){
+            binding.editTextEmailAddress.error = "E-mail is required!"
             return false
         }
 

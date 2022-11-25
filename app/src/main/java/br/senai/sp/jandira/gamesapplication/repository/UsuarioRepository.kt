@@ -1,6 +1,7 @@
 package br.senai.sp.jandira.gamesapplication.repository
 
 import android.content.Context
+import android.provider.ContactsContract
 import br.senai.sp.jandira.gamesapplication.dao.usuariodao.UsuarioDb
 import br.senai.sp.jandira.gamesapplication.model.Usuario
 
@@ -23,7 +24,11 @@ class UsuarioRepository(context: Context) {
         return db.getAll()
     }
 
-    fun getContactById (id: Int): List<Usuario>{
+    fun getContactById (id: Int): Usuario{
         return db.getUsuarioById(id)
+    }
+
+    fun getUsuarioByEmail(email: String): Usuario{
+        return db.getUsuarioByEmail(email)
     }
 }
