@@ -26,6 +26,12 @@
     <string name="text_user_email">username@gmail.com</string>
     <string name="text_title_account">Your registered games</string>
     <string name="registered_games">Currently Playing</string>
+    <string name="description_game">Description</string>
+    <string name="studio_game">Studio</string>
+    <string name="date_release">Release date of</string>
+    <string name="games_registration_add">Game registration</string>
+    <string name="game_status">Game finish?</string>
+    <string name="afe_user">Age?</string>
 
     <string-array name="consoles">
         <item>PlayStation 5</item>
